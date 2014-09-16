@@ -4,9 +4,19 @@ using ZendeskApi_v2.Models.Shared;
 
 namespace ZendeskApi_v2.Models.Tickets
 {    
-    public class Ticket : BaseTicket
+    public class Ticket //: BaseTicket
     {
-        
+        [JsonProperty("url")]
+        public string Url { get; set; }
+
+        [JsonProperty("id")]
+        public long? Id { get; set; }
+
+        [JsonProperty("created_at")]
+        public string CreatedAt { get; set; }
+
+        [JsonProperty("updated_at")]
+        public string UpdatedAt { get; set; }
 
         [JsonProperty("external_id")]
         public object ExternalId { get; set; }             
@@ -21,7 +31,7 @@ namespace ZendeskApi_v2.Models.Tickets
         public string Description { get; internal set; }
 
         [JsonProperty("subject")]
-        public string Subject { get; set; }        
+        public string Subject { get; set; }
 
         [JsonProperty("priority")]
         public string Priority { get; set; }
@@ -66,8 +76,8 @@ namespace ZendeskApi_v2.Models.Tickets
         [JsonProperty("problem_id")]
         public object ProblemId { get; set; }
 
-        [JsonProperty("has_incidents")]
-        public bool HasIncidents { get; set; }
+        //[JsonProperty("has_incidents")]
+        //public bool HasIncidents { get; set; }
 
         [JsonProperty("due_at")]
         public string DueAt { get; set; }

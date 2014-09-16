@@ -35,6 +35,9 @@ namespace ZendeskApi_v2.Models.Search
         [JsonProperty("priority")]
         public string Priority { get; set; }
 
+        [JsonProperty("status")]
+        public string Status { get; set; }
+
         [JsonProperty("topic_type")]
         public string TopicType { get; set; }
 
@@ -82,5 +85,17 @@ namespace ZendeskApi_v2.Models.Search
 
         [JsonProperty("url")]
         public string Url { get; set; }
+
+
+        [JsonProperty("satisfaction_rating")]
+        public SatisfactionRating SatisfactionRating { get; set; }
+
+        [JsonProperty("requester_id")]
+        public long? RequesterId { get; set; }
+
+        [JsonProperty("assignee_id")]
+        public long? AssigneeId { get; set; }
+
+        
     }
 }
